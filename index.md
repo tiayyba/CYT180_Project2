@@ -141,7 +141,9 @@ Compare the performance of the two models and briefly answer the following quest
 
 Students must complete two components.
 1. Written Report (PDF)
+2. Project Presentation to Instructor
 
+### Report
 Your report should clearly demonstrate your understanding of the machine learning workflow by including screenshots of each step and explanations of the parameter settings used in the operators.
 
 - **Dataset Overview**
@@ -187,7 +189,7 @@ Your report should clearly demonstrate your understanding of the machine learnin
     - Which model achieved the higher F1 score
     - Possible reasons for the performance difference
 
-2. Project Presentation
+### Project Presentation
 
 Students must present their project to the instructor. During the presentation, students should:
 
