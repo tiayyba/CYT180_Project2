@@ -118,7 +118,7 @@ Compare the performance of the two models and briefly answer the following quest
 
 
 
-## SUBMISSION DETAILS
+## SUBMISSION DETAILS (Report)
 
 Submit one report (PDF) through the course LMS.
 
@@ -170,39 +170,27 @@ Your report should clearly demonstrate your understanding of the machine learnin
 
 ----
 
-## Rubric (15% Total)
+## Project Presentation
 
-### **Part A — DataCamp (5%)**
-- Screenshot showing completion of **Chapter 1: Common Data Problems** (name + timestamp visible)
+Students must present their project to the instructor. During the presentation, students should:
 
-### **Part B — Firewall Log Cleaning (10%)**
-1. Identifying Data Issues — **2.0 pts**
-  - Correctly identifies **at least 8** issues in the dataset  
-2. Cleaning & Standardization — **4.0 pts**
-  - screenshots included in the report  
-    - Parsed timestamps  
-    - IP validation  
-    - Port correction  
-    - Protocol/action normalization  
-    - Byte conversions  
-    - Country/device cleanup  
-    - Duplicate removal  
-3. Validation Checks — **1.5 pts**
-  - At least **3 meaningful checks**, such as:
-    - Valid range for ports  
-    - Valid protocol/action categories  
-    - No negative or non‑numeric bytes  
-    - No future timestamps  
-    - Duplicates removed  
+ - Show their Altair AI Studio workflow
+ - Explain the data preprocessing steps
+ - Explain how the two machine learning models work
+ - Show and interpret the model performance results
+ - Compare the two models
+ - Students should be prepared to answer questions about their workflow and results.
 
-4. Visualization — **1.0 pt**
-  - One simple, correct plot (e.g., top IPs, allow vs deny, common ports)  
-  - Must be generated *after* cleaning  
+----
 
-5. Report Quality & Explanation — **1.5 pts**
-  - Clear, concise summary (1–2 pages)  
-  - Explains the problems found, cleaning steps, assumptions, and validations  
-  - Demonstrates understanding of the cleaning logic  
+## Grading Rubric (15 Marks)
+
+| Component | Description | Marks |
+|----------|-------------|------|
+| **Written Report** | Clear report including dataset description, preprocessing steps, screenshots of operators and parameter settings, model training, evaluation metrics, and comparison of models | 5 |
+| **Project Presentation** | Student presents the Altair AI Studio workflow, explains preprocessing steps, demonstrates both machine learning models, and discusses performance results | 5 |
+| **Answering Questions** | Student demonstrates understanding of the project by correctly answering questions about the dataset, preprocessing steps, models used, and evaluation metrics | 5 |
+| **Total** |  | **15 Marks** |
 
 ----
 
