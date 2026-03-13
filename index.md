@@ -153,7 +153,7 @@ Your report should clearly demonstrate your understanding of the machine learnin
     Include screenshots showing:
    - Logistic Regression operator and its parameter settings
    - The second machine learning model and its parameter settings
-Provide a brief explanation of how each model works.
+   - Provide a brief explanation of how each model works.
 9. **Model Performance**
 
    Include screenshots showing:
