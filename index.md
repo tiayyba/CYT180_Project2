@@ -143,7 +143,7 @@ Students must complete two components.
 1. Written Report (PDF)
 2. Project Presentation to Instructor
 
-### Report Requirements
+### 1. Report Requirements
 Your report should clearly demonstrate your understanding of the machine learning workflow by including screenshots of each step and explanations of the parameter settings used in the operators.
 
 - **Dataset Overview**
@@ -189,9 +189,10 @@ Your report should clearly demonstrate your understanding of the machine learnin
     - Which model achieved the higher F1 score
     - Possible reasons for the performance difference
 
-### Project Presentation
+### 2. Project Presentation
 
-Students must present their project to the instructor. During the presentation, students should:
+Students must present their project to the instructor during week 12 and week 13 in person class.
+During the presentation, students should:
 
  - Show their Altair AI Studio workflow
  - Explain the data preprocessing steps
@@ -199,6 +200,17 @@ Students must present their project to the instructor. During the presentation, 
  - Show and interpret the model performance results
  - Compare the two models
  - Students should be prepared to answer questions about their workflow and results.
+
+----
+## Blackboard Discussion Post (Group Registration)
+
+Each group must create one post in the Blackboard Discussion Thread that includes:
+
+- Names of both group members
+- Indication of whether your group will present in Week 12 or Week 13
+- This helps the instructor organize the presentation schedule.
+- This must be done before the end of week 10.
+
 
 ----
 
@@ -211,14 +223,3 @@ Students must present their project to the instructor. During the presentation, 
 | **Answering Questions** | Student demonstrates understanding of the project by correctly answering questions about the dataset, preprocessing steps, models used, and evaluation metrics | 5 |
 | **Total** |  | **15 Marks** |
 
-----
-
-
-### Academic Integrity
-- The work you submit must be your own.
-- You may discuss ideas with classmates, but you must write your own code, explanations, and analysis.
-- You may use AI‑based tools for support, but:
-   - Your submission must not be entirely AI‑generated.
-   - You are responsible for understanding, verifying, and being able to explain all work you submit.
-- All screenshots must show the current date/time and your unique username.
-- Submissions may be checked for similarity, AI‑generated patterns, or unusual code structure.
