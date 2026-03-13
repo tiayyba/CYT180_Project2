@@ -22,8 +22,6 @@ Precisely, in this project you will learn to:
 - Interpret results in the context of cybersecurity threat detection
 
 ----
-### Tool: Altair AI Studio
-
 ## Tool: Altair AI Studio
 
 This project will be completed using **Altair AI Studio**, a visual data analytics and machine learning platform that allows users to design machine learning workflows using a graphical pipeline of operators rather than writing code. The platform supports common tasks in the machine learning lifecycle such as data loading, data cleaning, feature preparation, model training, and performance evaluation.
