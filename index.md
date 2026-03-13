@@ -162,7 +162,7 @@ Your report should clearly demonstrate your understanding of the machine learnin
    - Explain what the metrics indicate about model performance.
 11. **Model Comparison**
 
-    Write a short comparison discussing:
+    Write a precise comparison discussing:
     - Which model performed better
     - Which model achieved the higher F1 score
     - Possible reasons for the performance difference
