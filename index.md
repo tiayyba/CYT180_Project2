@@ -143,7 +143,7 @@ Students must complete two components.
 1. Written Report (PDF)
 2. Project Presentation to Instructor
 
-### Report
+### Report Requirements
 Your report should clearly demonstrate your understanding of the machine learning workflow by including screenshots of each step and explanations of the parameter settings used in the operators.
 
 - **Dataset Overview**
