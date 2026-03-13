@@ -135,7 +135,7 @@ Your report should clearly demonstrate your understanding of the machine learnin
    Include screenshots and explanations showing:
 
    - Attribute type inspection
-   - Conversion of Flow_Bytes_s and Flow_Packets_s to numeric
+   - Conversion of `Flow_Bytes_s` and `Flow_Packets_s` to numeric
    - Handling of NaN and Infinity values
    - Setting the Label attribute
    For each step, include:
