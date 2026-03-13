@@ -26,7 +26,7 @@ Precisely, in this project you will learn to:
 
 This project will be completed using **Altair AI Studio**, a visual data analytics and machine learning platform that allows users to design machine learning workflows using a graphical pipeline of operators rather than writing code. The platform supports common tasks in the machine learning lifecycle such as data loading, data cleaning, feature preparation, model training, and performance evaluation.
 
-Altair AI Studio is a good fit for this project because it allows students to focus on understanding the machine learning workflow rather than spending time implementing algorithms in code. By visually connecting operators in a pipeline, students can clearly see how data moves through each stage of the machine learning process, including preprocessing, model training, and evaluation.
+Altair AI Studio is a good fit for this project because it allows students to focus on understanding the machine learning workflow rather than spending time implementing algorithms in code. By visually connecting operators in a pipeline, you can clearly see how data moves through each stage of the machine learning process, including preprocessing, model training, and evaluation.
 
 Using a visual workflow also makes it easier to:
 
@@ -35,11 +35,9 @@ Using a visual workflow also makes it easier to:
 * Experiment with different models and parameter settings
 * Compare multiple models within the same pipeline
 
-While this project uses a visual machine learning tool, students should understand that in many production environments machine learning models are implemented using code, typically with tools such as Python-based libraries. However, visual tools like Altair AI Studio are widely used in industry for rapid prototyping, exploratory data analysis, and teaching machine learning concepts.
+While this project uses a visual machine learning tool, you should understand that in many production environments machine learning models are implemented using code, typically with tools such as Spark MLlib. However, visual tools like Altair AI Studio are widely used in industry for rapid prototyping, exploratory data analysis, and teaching machine learning concepts.
 
-Students who prefer may also implement similar workflows using code, but the visual pipeline approach helps build a strong conceptual understanding of the machine learning process, which is the primary goal of this assignment.
-
-Students can access **Altair AI Studio through Seneca MyApps**. Log in to your Seneca account and launch the application from the **MyApps portal**.
+You can access **Altair AI Studio through Seneca MyApps**. Log in to your Seneca account and launch the application from the **MyApps portal**.
 
 
 ----
