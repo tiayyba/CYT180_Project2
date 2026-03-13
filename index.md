@@ -34,7 +34,7 @@ Using a visual workflow also makes it easier to:
 * Experiment with different models and parameter settings
 * Compare multiple models within the same pipeline
 
-While this project uses a visual machine learning tool, you should understand that in many production environments machine learning models are implemented using code, typically with tools such as Spark MLlib. However, visual tools like Altair AI Studio are widely used in industry for rapid prototyping, exploratory data analysis, and teaching machine learning concepts.
+While this project uses a visual machine learning tool, you should understand that in many production environments machine learning models are implemented using code, typically with tools such as **scikit-learn**, **Spark MLlib**. However, visual tools like Altair AI Studio are widely used in industry for rapid prototyping, exploratory data analysis, and teaching machine learning concepts. By visually connecting operators in a pipeline, you can clearly see how data moves.
 
 You can access **Altair AI Studio through Seneca MyApps**. Log in to your Seneca account and launch the application from the **MyApps portal**.
 
@@ -99,14 +99,14 @@ Failure to do this may cause Altair AI Studio to crash during model training.
 
 ### Task 2 – Sample the Dataset
 
-Because the dataset is very large, if Altair AI is not able to handle all of the data due to your system's RAM capabilities, you should randomly sample 30-75% of the data to reduce processing time while building your machine learning pipeline. This step is completely optional. I was able to handle 100% of data on my machine with 32GB of RAM. 
+Because the dataset is very large, if Altair AI is not able to handle all of the data due to your system's RAM capabilities, optionally sample 30–75% of the data to reduce processing time while building your machine learning pipeline. This step is completely optional. I was able to handle 100% of data on my machine with 32GB of RAM. 
 
 
 ### Task 3 – Data Cleaning
 
 Perform the following preprocessing steps:
 
-- Replace the values NaN and Infinity with missing values.
+- Replace NaN and Infinity values with missing values so that downstream operators can process numeric data correctly.
 - Remove rows containing missing values.
 - Ensure all feature attributes are numeric.
 
@@ -127,7 +127,7 @@ Split the dataset into:
 
 You must train two models:
 
-- Logistic Regression
+- Logistic Regression (Required)
 - One additional model chosen from the following:
   - Decision Tree
   - Random Forest
@@ -214,7 +214,8 @@ Your report should clearly demonstrate your understanding of the machine learnin
 
 ### 2. Project Presentation
 
-Students must present their project to the instructor during week 12 and week 13 in person class.
+Students must present their project to the instructor in-person during Week 12 or Week 13.
+
 During the presentation, students should:
 
  - Show their Altair AI Studio workflow
