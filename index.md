@@ -20,6 +20,23 @@ How This Project Supports CYT180 Learning Objectives:
 - Compare model performance using accuracy, precision, recall, and F1-score
 - Interpret results in the context of cybersecurity threat detection
 
+----
+### Tool: Altair AI Studio
+
+This project will be completed using `Altair AI Studio`, a visual data analytics and machine learning platform that allows users to build machine learning workflows using operators and pipelines instead of writing code. It is commonly used for data preparation, model building, and performance evaluation.
+
+Students can access `Altair AI Studio` through **Seneca MyApps**. Log in to your Seneca account and launch the application from the MyApps portal.
+
+----
+
+## Project Type
+
+This is a group project.
+
+- Each group must consist of exactly 2 students.
+- Both students must participate in building the workflow, writing the report, and presenting the project.
+- During the presentation, both group members should be able to explain the project and answer questions.
+
 ## Dataset Description
 The dataset used in this project is taken from the **CICIDS2017: https://www.unb.ca/cic/datasets/ids-2017.html** intrusion detection dataset, which is widely used in cybersecurity research for developing and evaluating intrusion detection systems.
 
@@ -120,17 +137,18 @@ Compare the performance of the two models and briefly answer the following quest
 
 ## SUBMISSION DETAILS (Report)
 
-Submit one report (PDF) through the course LMS.
+Students must complete two components.
+1. Written Report (PDF)
 
 Your report should clearly demonstrate your understanding of the machine learning workflow by including screenshots of each step and explanations of the parameter settings used in the operators.
 
-1. **Dataset Overview**
+- **Dataset Overview**
 
    Include:
    - A brief description of the dataset
    - A screenshot showing the dataset loaded in Altair AI Studio
    - A short explanation of what the dataset represents 
-3. **Data Preprocessing**
+- **Data Preprocessing**
 
    Include screenshots and explanations showing:
 
@@ -143,34 +161,31 @@ Your report should clearly demonstrate your understanding of the machine learnin
    - Screenshot of the operator
    - Screenshot of the operator parameter settings
    - A short explanation of why the step is necessary
-5. **Machine Learning Pipeline**
+- **Machine Learning Pipeline**
 
    Include:
    - A screenshot of the complete Altair AI Studio workflow
    - A precise explanation of how the pipeline processes the data
-7. **Model Training**
+- **Model Training**
 
     Include screenshots showing:
    - Logistic Regression operator and its parameter settings
    - The second machine learning model and its parameter settings
    - Provide a brief explanation of how each model works.
-9. **Model Performance**
+- **Model Performance**
 
    Include screenshots showing:
    - Performance metrics for both models
    - Confusion matrices
    - Explain what the metrics indicate about model performance.
-11. **Model Comparison**
+- **Model Comparison**
 
     Write a precise comparison discussing:
     - Which model performed better
     - Which model achieved the higher F1 score
     - Possible reasons for the performance difference
 
-
-----
-
-## Project Presentation
+2. Project Presentation
 
 Students must present their project to the instructor. During the presentation, students should:
 
