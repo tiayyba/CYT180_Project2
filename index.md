@@ -11,7 +11,8 @@ After preparing the dataset, you will train Logistic Regression and one addition
 
 ## Learning Objectives
 This project helps you build practical skills for working with real cybersecurity data. Firewall logs are often messy, inconsistent, and difficult to analyze until they are cleaned. By completing this project, you practice the core steps analysts take before any threat detection or monitoring work can begin.
-How This Project Supports CYT180 Learning Objectives: 
+
+Precisely, in this project you will learn to:
 - Load and preprocess real-world cybersecurity datasets
 - Perform data preprocessing and cleaning for machine learning
 - Handle issues such as invalid values, missing values, and incorrect attribute types
