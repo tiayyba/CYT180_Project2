@@ -46,7 +46,7 @@ You can access **Altair AI Studio through Seneca MyApps**. Log in to your Seneca
 
 This is a **group project**.
 
-- Each group must consist of exactly 2 students.
+- Each group must consist of 2 students. If you want to work alone, that is ok too, but the group size cannot be more than 2.
 - Both students must participate in building the workflow, writing the report, and presenting the project.
 - During the presentation, both group members must be able to explain the project and answer questions.
 - The presentation is **not a formal class presentation**. Instead, each group will demonstrate and explain their project directly to the instructor.
