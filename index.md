@@ -96,7 +96,6 @@ Two attributes may appear as polynomial type attributes:
 If these attributes appear as polynomial, convert them to numeric attributes before continuing.
 Failure to do this may cause Altair AI Studio to crash during model training.
 
-
 ### Task 2 – Sample the Dataset
 
 Because the dataset is very large, if Altair AI is not able to handle all of the data due to your system's RAM capabilities, optionally sample 30–75% of the data to reduce processing time while building your machine learning pipeline. This step is completely optional. I was able to handle 100% of data on my machine with 32GB of RAM. 
@@ -106,8 +105,15 @@ Because the dataset is very large, if Altair AI is not able to handle all of the
 
 Perform the following preprocessing steps:
 
-- Replace NaN and Infinity values with missing values so that downstream operators can process numeric data correctly.
+- Replace `NaN` and `Infinity` values with missing values so that downstream operators can process numeric data correctly.
 - Remove rows containing missing values.
+- Filter out rows where key numeric features are zero or invalid. Specifically, only keep rows where the following columns are greater than 0:
+  - `Flow Duration`
+  - `Init_Win_bytes_forward`
+  - `Init_Win_bytes_backward`
+  - `Flow IAT Min`
+  - `Fwd IAT Min`
+  - `Fwd IAT Max`
 - Ensure all feature attributes are numeric.
 
 ### Task 4 – Set the Label Attribute
