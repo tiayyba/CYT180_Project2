@@ -161,9 +161,7 @@ Compare the performance of the two models and briefly answer the following quest
 
 ----
 
-
-
-## SUBMISSION DETAILS (Report)
+## SUBMISSION DETAILS
 
 Students must complete two components.
 1. Written Report (PDF)
