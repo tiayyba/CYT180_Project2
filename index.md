@@ -37,6 +37,8 @@ This is a group project.
 - Both students must participate in building the workflow, writing the report, and presenting the project.
 - During the presentation, both group members should be able to explain the project and answer questions.
 
+----
+
 ## Dataset Description
 The dataset used in this project is taken from the **CICIDS2017: https://www.unb.ca/cic/datasets/ids-2017.html** intrusion detection dataset, which is widely used in cybersecurity research for developing and evaluating intrusion detection systems.
 
