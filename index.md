@@ -46,8 +46,8 @@ Load the provided CSV dataset into Altair AI Studio.
 Inspect the attribute types in the dataset.
 Two attributes may appear as polynomial type attributes:
 
-- Flow_Bytes_s
-- Flow_Packets_s
+- `Flow_Bytes_s`
+- `Flow_Packets_s`
 
 If these attributes appear as polynomial, convert them to numeric attributes before continuing.
 Failure to do this may cause Altair AI Studio to crash during model training.
