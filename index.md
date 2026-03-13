@@ -31,11 +31,24 @@ Students can access `Altair AI Studio` through **Seneca MyApps**. Log in to your
 
 ## Project Type
 
-This is a group project.
+This is a **group project**.
 
 - Each group must consist of exactly 2 students.
 - Both students must participate in building the workflow, writing the report, and presenting the project.
-- During the presentation, both group members should be able to explain the project and answer questions.
+- During the presentation, both group members must be able to explain the project and answer questions.
+- The presentation is **not a formal class presentation**. Instead, each group will demonstrate and explain their project directly to the instructor.
+
+---
+
+## Blackboard Discussion Post (Project 2 Group Registeration)
+
+Each group must reply to the Blackboard Discussion Thread that includes:
+
+- Names of both group members
+- Indication of whether your group will present in Week 12 or Week 13 (these are the only available presentation weeks)
+
+This information allows the instructor to organize the presentation schedule.
+The post must be submitted before the end of Week 11.
 
 ----
 
@@ -201,15 +214,6 @@ During the presentation, students should:
  - Compare the two models
  - Students should be prepared to answer questions about their workflow and results.
 
-----
-## Blackboard Discussion Post (Group Registration)
-
-Each group must create one post in the Blackboard Discussion Thread that includes:
-
-- Names of both group members
-- Indication of whether your group will present in Week 12 or Week 13
-- This helps the instructor organize the presentation schedule.
-- This must be done before the end of week 10.
 
 
 ----
