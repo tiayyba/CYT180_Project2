@@ -124,13 +124,13 @@ Submit one report (PDF) through the course LMS.
 
 Your report should clearly demonstrate your understanding of the machine learning workflow by including screenshots of each step and explanations of the parameter settings used in the operators.
 
-**1. Dataset Overview**
+1. **Dataset Overview**
    Include:
    
    - A brief description of the dataset
    - A screenshot showing the dataset loaded in Altair AI Studio
    - A short explanation of what the dataset represents 
-**2. Data Preprocessing**
+2. **Data Preprocessing**
    Include screenshots and explanations showing:
 
    - Attribute type inspection
@@ -141,24 +141,24 @@ Your report should clearly demonstrate your understanding of the machine learnin
    - Screenshot of the operator
    - Screenshot of the operator parameter settings
    - A short explanation of why the step is necessary
-**3. Machine Learning Pipeline**
+3. **Machine Learning Pipeline**
    Include:
 
    - A screenshot of the complete Altair AI Studio workflow
    - A precise explanation of how the pipeline processes the data
-**4. Model Training**
+4. **Model Training**
    Include screenshots showing:
 
    - Logistic Regression operator and its parameter settings
    - The second machine learning model and its parameter settings
 Provide a brief explanation of how each model works.
-**5. Model Performance**
+5. **Model Performance**
    Include screenshots showing:
 
    - Performance metrics for both models
    - Confusion matrices
    - Explain what the metrics indicate about model performance.
-**6. Model Comparison**
+6. **Model Comparison**
     Write a short comparison discussing:
     - Which model performed better
     - Which model achieved the higher F1 score
