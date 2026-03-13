@@ -12,9 +12,8 @@ After preparing the dataset, you will train Logistic Regression and one addition
 ## Learning Objectives
 This project helps you build practical skills for working with real cybersecurity data. Firewall logs are often messy, inconsistent, and difficult to analyze until they are cleaned. By completing this project, you practice the core steps analysts take before any threat detection or monitoring work can begin.
 
-Precisely, in this project you will learn to:
+In this project you will learn to:
 - Load and preprocess real-world cybersecurity datasets
-- Perform data preprocessing and cleaning for machine learning
 - Handle issues such as invalid values, missing values, and incorrect attribute types
 - Build a machine learning pipeline in Altair AI Studio
 - Train and evaluate multiple classification algorithms
@@ -46,14 +45,14 @@ You can access **Altair AI Studio through Seneca MyApps**. Log in to your Seneca
 
 This is a **group project**.
 
-- Each group must consist of 2 students. If you want to work alone, that is ok too, but the group size cannot be more than 2.
+- Each group should ideally consist of 2 students. Solo submissions are allowed, but groups may not exceed 2 students.
 - Both students must participate in building the workflow, writing the report, and presenting the project.
 - During the presentation, both group members must be able to explain the project and answer questions.
 - The presentation is **not a formal class presentation**. Instead, each group will demonstrate and explain their project directly to the instructor.
 
 ---
 
-## Blackboard Discussion Post (Project 2 Group Registeration)
+## Blackboard Discussion Post (Project 2 Group Registration)
 
 Each group must reply to the Blackboard Discussion Thread that includes:
 
