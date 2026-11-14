@@ -1,9 +1,9 @@
 # CYT180 — Project 2: Network Traffic Classification Using Machine Learning Algorithms (15%)
 
-**Work type:** Group project (2 students, or solo) <br>
-**Group registration:** Blackboard discussion post, before the end of Week 11 <br>
-**Report due:** ____________________ (11:59 PM, on Blackboard) <br>
-**Presentations:** Week 12, in person, to the instructor (Week 14 is a backup week only) <br>
+**Work type:** Group project (2 students, or solo)
+**Group registration:** Blackboard discussion post, before the end of Week 11
+**Report due:** ____________________ (11:59 PM, on Blackboard)
+**Presentations:** Week 12, in person, to the instructor (Week 14 is a backup week only)
 
 In this project, you will build a machine learning pipeline to detect malicious network traffic using data from a real cybersecurity dataset. The objective is to apply machine learning classification techniques to tell the difference between benign (normal) network traffic and Distributed Denial of Service (DDoS) attacks.
 
@@ -242,89 +242,67 @@ Each group submits **two files** on Blackboard (one submission per group), and b
 1. **Written report (PDF)**
 2. **Your exported Altair AI Studio process (.rmp file).** In Altair AI Studio, use **File → Export Process...** and name it with your group number, for example `group07_P2.rmp`.
 
-A submission without the .rmp file loses 2 marks from the report.
-
 ### 1. Report Requirements
 
-Your report must show your understanding of the machine learning workflow, with screenshots of each step and explanations of the parameter settings you used.
+Your report shows that you built and ran the workflow yourselves. It has a cover page, **9 required screenshots**, the row count table from Task 3, and your answers to the Task 9 questions.
 
-- **Cover page**
+**How to take a screenshot:** in Altair AI Studio, click an operator in your process. Its settings appear in the **Parameters** panel on the right. Take one screenshot that shows both the operator and its Parameters panel. Results screenshots must show the "ExampleSet (... examples ...)" line with the number of rows.
 
-   Include:
-   - Your group number
-   - Names and student IDs of both group members
-   - Your dataset file name
+**Cover page**
 
-- **Dataset Overview**
+- Your group number
+- Names and student IDs of both group members
+- Your dataset file name
 
-   Include:
-   - A brief description of the dataset
-   - A screenshot showing the dataset loaded in Altair AI Studio
-   - A short explanation of what the dataset represents
+**Required screenshots**
 
-- **Data Preprocessing**
+Under each screenshot, write 2–3 sentences in your own words explaining what the step does and why it is needed.
 
-   Include screenshots and explanations showing:
+| # | Screenshot | What it must show |
+|---|---|---|
+| 1 | Complete workflow | Your whole process, with every operator visible |
+| 2 | Loaded data | The results view after loading: your file name, the number of rows, and `Flow_Bytes_s` and `Flow_Packets_s` as polynominal |
+| 3 | Fixing the number columns | Parse Numbers and Replace Infinite Values, with their settings |
+| 4 | "Greater than 0" filter settings | The Filter Examples operator with the six conditions |
+| 5 | **Rows after the filter** | The results view after the "greater than 0" filter, showing the number of rows. This number is different for every group's file. |
+| 6 | Positive class and label | Remap Binominals (DDoS = positive) and Set Role (`Label` = label) |
+| 7 | Split Data | 80/20, stratified sampling, use local random seed = 1992 |
+| 8 | Normalize | Z-transformation, and the **pre** output connected to the Apply Model for the test data |
+| 9 | Results for both models | For each model: accuracy, precision, recall, F1 score, and the confusion matrix |
 
-   - Attribute type inspection (including `Label` as binominal)
-   - Removal of `Destination_Port`
-   - Conversion of `Flow_Bytes_s` and `Flow_Packets_s` to numeric
-   - Handling of `NaN` and `Infinity` values
-   - The "greater than 0" filter
-   - Setting the positive class (Remap Binominals) and the label (Set Role)
-   - The completed row count table from Task 3
+Also include a screenshot of each model's operator with its parameter settings (Logistic Regression and your second model), with 2–3 sentences on how each model works.
 
-   For each step, include:
-   - A screenshot of the operator
-   - A screenshot of the operator's parameter settings
-   - A short explanation of why the step is necessary
+**Row count table:** include your completed table from Task 3. The numbers must match your screenshots 2 and 5, and the four numbers in each confusion matrix must add up to your test set size.
 
-- **Machine Learning Pipeline**
+**Task 9 answers:** answer all five questions using your own numbers.
 
-   Include:
-   - A screenshot of the complete Altair AI Studio workflow
-   - A clear explanation of how the pipeline processes the data, from loading to evaluation
-   - Screenshots of the Split Data settings (stratified sampling and the seed 1992) and the Normalize settings
+### 2. Project Presentation and Questions (Week 12)
 
-- **Model Training**
+Each group meets the instructor in person during **Week 12**. Bring a laptop with Altair AI Studio, your .rmp file, and your group's dataset file.
 
-   Include screenshots showing:
-   - The Logistic Regression operator and its parameter settings
-   - The second model and its parameter settings
-   - A brief explanation of how each model works
+**Live demo.** You will:
 
-- **Model Performance**
+1. Open your .rmp file and run it on your group's dataset file. The row count after the "greater than 0" filter and the model results must match your report.
+2. Make one small change that the instructor asks for on the spot (for example, change the split to 70/30, or remove the Normalize operator), run it again, and explain what changed in the results and why.
 
-   Include screenshots showing:
-   - Accuracy, precision, recall, and F1 score for both models
-   - The confusion matrices for both models
-   - An explanation of what the metrics tell you about each model
+**Individual questions.** Each student is asked **three questions** and receives their **own mark** for this part. Questions are about your own workflow and your own numbers, for example:
 
-- **Model Comparison and Interpretation**
+- Why did your number of rows drop so much at the "greater than 0" filter, and which class lost more rows?
+- Point to the false negatives in your confusion matrix. What do they mean for a SOC analyst?
+- Why is Normalize learned from the training data only?
 
-   Answer all five questions from Task 9.
-
-### 2. Project Presentation
-
-Each group presents its project to the instructor in person during **Week 12**.
-
-During the presentation, students should:
-
-- Open and show their Altair AI Studio workflow
-- Explain the data preprocessing steps
-- Explain how the two machine learning models work
-- Show and interpret the model performance results
-- Compare the two models and explain their metric choice from Task 9
-
-Both members must be ready to answer questions about their workflow and results. Each member will be asked their own questions.
+If a student cannot explain a part of the report, marks for that part of the report may be reduced for that student.
 
 ----
 
 ## Grading Rubric (15 Marks)
 
-| Component | Description | Marks |
+| Component | What is marked | Marks |
 |----------|-------------|------|
-| **Written Report** | Dataset description, preprocessing steps with screenshots of operators and parameter settings, completed row count table, model training, evaluation metrics, confusion matrices, and answers to the Task 9 questions (including the metric choice and false negative / false positive discussion). Exported .rmp file included. | 5 |
-| **Project Presentation** | Group presents the Altair AI Studio workflow, explains the preprocessing steps, demonstrates both machine learning models, and discusses the performance results | 5 |
-| **Answering Questions** | Each student shows understanding of the project by correctly answering questions about the dataset, preprocessing steps, models used, and evaluation metrics | 5 |
+| **Report: screenshots and numbers** | All 9 required screenshots are included, and the numbers (row counts, confusion matrices) match your group's dataset file and each other | 3 |
+| **Report: Task 9 answers** | Clear answers to the five Task 9 questions, using your own numbers (including the false negative / false positive discussion and the metric choice) | 2 |
+| **Live demo** | The group runs its own .rmp on its own file with matching results (2), and makes the requested change and explains its effect (2) | 4 |
+| **Individual questions** | Each student answers three questions about their own workflow and results (2 marks per question, marked for each student separately) | 6 |
 | **Total** |  | **15 Marks** |
+
+A submission without the .rmp file loses 2 marks from the report. Results that match another group's dataset file, instead of your own, receive 0 for the project.
