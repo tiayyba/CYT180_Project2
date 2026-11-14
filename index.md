@@ -1,9 +1,9 @@
 # CYT180 — Project 2: Network Traffic Classification Using Machine Learning Algorithms (15%)
 
-**Work type:** Group project (2 students, or solo)
-**Group registration:** Blackboard discussion post, before the end of Week 11
-**Report due:** ____________________ (11:59 PM, on Blackboard)
-**Presentations:** Week 12, in person, to the instructor (Week 14 is a backup week only)
+**Work type:** Group project (2 students, or solo) <br>
+**Group registration:** Blackboard discussion post, before the end of Week 11 <br>
+**Report due:** ____________________ (11:59 PM, on Blackboard) <br>
+**Presentations:** Week 12, in person, to the instructor (Week 14 is a backup week only) <br>
 
 In this project, you will build a machine learning pipeline to detect malicious network traffic using data from a real cybersecurity dataset. The objective is to apply machine learning classification techniques to tell the difference between benign (normal) network traffic and Distributed Denial of Service (DDoS) attacks.
 
@@ -62,12 +62,12 @@ This is a **group project**.
 
 ## Blackboard Discussion Post (Project 2 Group Registration)
 
-Each group must reply to the Project 2 Blackboard discussion thread with:
+There are 19 group numbers, from **01** to **19**. Each group chooses one free group number and replies to the Project 2 Blackboard discussion thread with:
 
-- The full names and student IDs of both group members
-- Which member is **Member 1**. Member 1's student ID decides your random seed (see below).
+- Your chosen **group number** (01 to 19)
+- The full names of both group members
 
-After registration, the instructor assigns each group a **group number** (01, 02, ...) and posts it on Blackboard. Your group number decides your dataset file.
+Before you post, read the earlier replies and pick a number that no other group has taken. If two groups post the same number, the group that posted first keeps it, and the other group must pick a new free number. Your group number decides your dataset file, so you can download it as soon as you have posted.
 
 The post must be submitted **before the end of Week 11**. All presentations take place in **Week 12**. Week 14 is a backup week, used only if a group cannot present in Week 12 for an approved reason. The instructor will post the presentation schedule after registration closes.
 
@@ -121,11 +121,9 @@ In this project **DDoS is the positive class**. This means that precision, recal
 
 ## Your Random Seed
 
-Several operators in this project use random numbers (the train/test split). To make your results repeatable, and different from other groups, you must use your own seed:
+When Altair AI Studio splits the data into training and test sets (Task 5), it picks the rows at random. A **random seed** is a number that fixes this random choice, so you get the same split, and the same results, every time you run your process.
 
-**Your seed = the last 4 digits of Member 1's student ID.** For example, if Member 1's ID is 123456789, your seed is 6789. If the last 4 digits start with 0 (for example 0412), use 412.
-
-Wherever an operator has the option **use local random seed**, tick it and type your seed. Your screenshots must show this setting.
+**Everyone uses the seed 1992** (Altair AI Studio's default). Wherever an operator has the option **use local random seed**, tick it and make sure the seed is 1992. Your screenshots must show this setting.
 
 ----
 
@@ -189,7 +187,7 @@ Use **Split Data** to split the cleaned data into:
 - 80% training data
 - 20% testing data
 
-Set *sampling type* to **stratified sampling**, so both parts keep the same share of BENIGN and DDoS rows as the full data. Tick **use local random seed** and type your seed.
+Set *sampling type* to **stratified sampling**, so both parts keep the same share of BENIGN and DDoS rows as the full data. Tick **use local random seed** and keep the seed at **1992**.
 
 ### Task 6 – Normalize the Features
 
@@ -254,8 +252,8 @@ Your report must show your understanding of the machine learning workflow, with 
 
    Include:
    - Your group number
-   - Names and student IDs of both group members, and which one is Member 1
-   - Your dataset file name and your seed
+   - Names and student IDs of both group members
+   - Your dataset file name
 
 - **Dataset Overview**
 
@@ -286,7 +284,7 @@ Your report must show your understanding of the machine learning workflow, with 
    Include:
    - A screenshot of the complete Altair AI Studio workflow
    - A clear explanation of how the pipeline processes the data, from loading to evaluation
-   - Screenshots of the Split Data settings (stratified sampling and your seed) and the Normalize settings
+   - Screenshots of the Split Data settings (stratified sampling and the seed 1992) and the Normalize settings
 
 - **Model Training**
 
