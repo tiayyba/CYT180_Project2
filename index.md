@@ -242,7 +242,7 @@ Answer these questions in your report. Use your own numbers in every answer.
 
 ## Submission Details
 
-Each group submits **two files** on Blackboard (one submission per group), and both members present in Week 12:
+Each group submits **three files** on Blackboard (one submission per group), and both members present in Week 12:
 
 1. **Written report (PDF)**
 2. **Your two exported Altair AI Studio processes (.rmp files)**, one with Logistic Regression and one with your second model (Task 7). In Altair AI Studio, use **File → Export Process...** and name them with your group number, for example `group07_P2_LR.rmp` and `group07_P2_model2.rmp`.
@@ -300,8 +300,8 @@ Each group meets the instructor in person during **Week 12**. Bring a laptop wit
 |----------|-------------|------|
 | **Report: screenshots and numbers** | All 9 required screenshots are included, and the numbers (row counts, confusion matrices) match your group's dataset file and each other | 3 |
 | **Report: Task 9 answers** | Clear answers to the six Task 9 questions, using your own numbers (including the false negative / false positive discussion and the metric choice) | 2 |
-| **Live demo** | The group runs its own .rmp files on its own file with matching results (2), and makes the requested change and explains its effect (2) | 4 |
-| **Individual questions** | Each student answers three questions about their own workflow and results (2 marks per question, marked for each student separately) | 6 |
+| **Live demo** | The group runs its own .rmp files on its own file with matching results, and makes the requested change and explains its effect| 4 |
+| **Individual questions** | Each student answers 3-4 questions about their own workflow and results ( marked for each student separately) | 6 |
 | **Total** |  | **15 Marks** |
 
 A submission without the .rmp files loses 2 marks from the report. Results that match another group's dataset file, instead of your own, receive 0 for the project.
