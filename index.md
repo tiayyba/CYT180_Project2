@@ -35,7 +35,7 @@ In this project you will learn to:
 
 This project is completed in **Altair AI Studio**, a visual data analytics and machine learning platform. Instead of writing code, you build a machine learning workflow by connecting operators in a graphical pipeline. The platform supports the common tasks of the machine learning lifecycle: loading data, cleaning data, preparing features, training models, and evaluating performance.
 
-Altair AI Studio is a good fit for this project because it lets you focus on understanding the machine learning workflow instead of spending time writing code. By connecting operators in a pipeline, you can clearly see how data moves through each stage of the process, from preprocessing to model training and evaluation.
+Altair AI Studio lets you focus on understanding the machine learning workflow instead of spending time writing code. By connecting operators in a pipeline, you can clearly see how data moves through each stage of the process, from preprocessing to model training and evaluation.
 
 Using a visual workflow also makes it easier to:
 
