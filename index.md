@@ -288,15 +288,9 @@ Each group meets the instructor in person during **Week 12**. Bring a laptop wit
 **Live demo.** You will:
 
 1. Open one of your .rmp files (the instructor chooses which) and run it on your group's dataset file. The row count after the "greater than 0" filter and the model results must match your report.
-2. Make one small change that the instructor asks for on the spot (for example, change the split to 70/30, or remove the Normalize operator), run it again, and explain what changed in the results and why.
+2. You may be asked to make a small change to the model and run it again, and explain what changed in the results and why.
 
-**Individual questions.** Each student is asked **three questions** and receives their **own mark** for this part. Questions are about your own workflow and your own numbers, for example:
-
-- Why did your number of rows drop so much at the "greater than 0" filter, and which class lost more rows?
-- Point to the false negatives in your confusion matrix. What do they mean for a SOC analyst?
-- Why is Normalize learned from the training data only?
-
-If a student cannot explain a part of the report, marks for that part of the report may be reduced for that student.
+**Individual questions.** Each student is asked **3-4 questions** and receives their **own mark** for this part. Questions are about your own workflow and your own numbers in the report.If a student cannot explain a part of the report, marks for that part of the report may be reduced for that student.
 
 ----
 
