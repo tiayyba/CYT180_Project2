@@ -1,9 +1,9 @@
 # CYT180 — Project 2: Network Traffic Classification Using Machine Learning Algorithms (15%)
 
-**Work type:** Group project (2 students, or solo)
-**Group registration:** Blackboard discussion post, before the end of Week 11
-**Report due:** ____________________ (11:59 PM, on Blackboard)
-**Presentations:** Week 12, in person, to the instructor (Week 14 is a backup week only)
+**Work type:** Group project (2 students, or solo) <br>
+**Group registration:** Blackboard discussion post, before the end of Week 10 <br>
+**Report due:** Dec 1 @ 11:59 PM, on Blackboard<br>
+**Presentations:** Week 12, in person, to the instructor<br>
 
 In this project, you will build a machine learning pipeline to detect malicious network traffic using data from a real cybersecurity dataset. The objective is to apply machine learning classification techniques to tell the difference between benign (normal) network traffic and Distributed Denial of Service (DDoS) attacks.
 
@@ -129,28 +129,30 @@ When Altair AI Studio splits the data into training and test sets (Task 5), it p
 
 ## Project Tasks
 
-Keep a record of the number of rows (examples) after each step. Altair AI Studio shows this at the top of the results view, for example "ExampleSet (79,012 examples, 1 special attribute, 77 regular attributes)". You will need these numbers for the table in Task 3.
+Each task tells you **what** your workflow must do and the **rules** it must follow. It is up to you to find the right Altair AI Studio operators, connect them, and choose their settings. Use the operator search box, the help text that Altair shows for each operator, and the Week 9 and Week 10 material. Where a step is known to be tricky, a **Hint** is given.
+
+Follow the rules exactly. Every group's dataset file is different, and your row counts are checked against your own file.
+
+**Seeing your results:** to see the data after any step, connect that operator's output to a **res** port (the small half-circles on the right edge of the process canvas) and click **Run**. The number of rows is shown at the bottom of the **Data** view, for example "ExampleSet (79,010 examples, 0 special attributes, 77 regular attributes)". The **Statistics** view shows each attribute's type, missing values, and the BENIGN/DDoS counts for `Label`. Keep a record of the number of rows after each task; you need them for Task 3.
 
 ### Task 1 – Load the Dataset
 
-1. Use **Import Data** (or the **Read CSV** operator) to load your group's sample file.
-2. In the last step of the import wizard, look at the type of each attribute. Two attributes appear as **polynominal** (text) instead of numeric:
-   - `Flow_Bytes_s`
-   - `Flow_Packets_s`
+Load your group's file into Altair AI Studio and look at the type of each attribute.
 
-   This happens because some of their values are the text `NaN` or `Infinity` instead of numbers. Leave them as they are for now; you fix them in Task 2.
-3. Change the type of `Label` from **polynominal** to **binominal**. Binominal means "exactly two values", which is what a yes/no classifier needs. If you missed this in the wizard, add a **Nominal to Binominal** operator for the `Label` attribute right after loading.
-4. Write down the number of rows loaded, and the number of BENIGN and DDoS rows (use the **Statistics** tab of the results view).
+Rules:
+- `Label` must be **binominal** (exactly two values), which is what a yes/no classifier needs.
+- Record the number of rows loaded and the number of BENIGN and DDoS rows.
+
+**Hint (import types):** Altair guesses each attribute's type by looking only at the first rows of the file. For `Flow_Bytes_s` and `Flow_Packets_s` it guesses a number type, but a few rows further down contain the text `Infinity` or `NaN`, and the import fails with *"Unparseable number: Infinity"*. In the last step of the import wizard, set these two attributes to **polynominal** (text). You turn them back into numbers in Task 2.
 
 ### Task 2 – Data Cleaning
 
-Perform the following steps, in this order:
+Your workflow must do the following, in this order:
 
-1. **Remove `Destination_Port`.** Use **Select Attributes** with *invert selection* ticked to remove it. In this dataset almost all DDoS flows go to port 80, so a model could "cheat" by learning the port number instead of the traffic behavior. A real attacker can use any port, so a model like that would not work in practice.
-2. **Convert `Flow_Bytes_s` and `Flow_Packets_s` to numeric.** Use **Parse Numbers** on these two attributes, with *unparsable value handling* set to **replace with missing**. Any value that cannot be read as a number (such as `NaN`) becomes a missing value.
-3. **Replace infinite values.** Use **Replace Infinite Values** and set them to **missing**. Infinite values break the calculations inside the models.
-4. **Remove rows with missing values.** Use **Filter Examples** with the condition **no_missing_attributes**.
-5. **Remove rows with zero or invalid values.** Use **Filter Examples** with *custom filters*, set to match **all** conditions, and keep only rows where each of these columns is **greater than 0**:
+1. **Remove the `Destination_Port` attribute.** In this dataset almost all DDoS flows go to port 80, so a model could "cheat" by learning the port number instead of the traffic behavior. A real attacker can use any port, so a model like that would not work in practice.
+2. **Turn `Flow_Bytes_s` and `Flow_Packets_s` into numeric attributes.** Any value that is not a real number (`NaN` or `Infinity`) must become a **missing value**. Infinite values break the calculations inside the models, so they must not stay in the data.
+3. **Remove every row that has a missing value.**
+4. **Remove rows with zero or invalid values.** Keep only the rows where **all six** of these attributes are **greater than 0** (strictly greater, not "greater than or equal"):
    - `Flow_Duration`
    - `Init_Win_bytes_forward`
    - `Init_Win_bytes_backward`
@@ -158,8 +160,9 @@ Perform the following steps, in this order:
    - `Fwd_IAT_Min`
    - `Fwd_IAT_Max`
 
-   (In this dataset, a value of -1 or 0 in these columns means the value was not recorded, not a real measurement.)
-6. Check that every attribute except `Label` is now numeric (integer or real).
+   In this dataset, a value of -1 or 0 in these columns means the value was not recorded, not a real measurement.
+
+After these steps, every attribute except `Label` must be numeric (integer or real). Use the **Statistics** view to check your work after each step.
 
 ### Task 3 – Row Count Table
 
@@ -168,41 +171,39 @@ Fill in this table with the numbers Altair AI Studio shows after each step. Incl
 | Step | Rows | BENIGN | DDoS |
 |---|---|---|---|
 | After loading (Task 1) | | | |
-| After removing rows with missing or infinite values (Task 2, steps 2–4) | | | |
-| After the "greater than 0" filter (Task 2, step 5) | | | |
+| After removing rows with missing values (Task 2, steps 2–3) | | | |
+| After the "greater than 0" filter (Task 2, step 4) | | | |
 | Training set (Task 5) | | | |
 | Test set (Task 5) | | | |
 
 ### Task 4 – Set the Label and the Positive Class
 
-1. Use **Remap Binominals** on `Label`: set *negative value* to **BENIGN** and *positive value* to **DDoS**. This tells Altair AI Studio that DDoS is the positive class, so precision, recall, and F1 score are calculated for DDoS.
-2. Use **Set Role** to make `Label` the **label** (the target the model learns to predict).
+Rules:
+- `Label` must have the **label** role (the target the model learns to predict).
+- **DDoS** must be the **positive class** and BENIGN the negative class, so that precision, recall, and F1 score are calculated for DDoS.
 
-Do Remap Binominals **before** Set Role. (If you do it after, tick *include special attributes* in Remap Binominals.)
+**Hint (positive class):** look for an operator that remaps the two values of a binominal attribute into a negative and a positive value. Set it up **before** you give `Label` the label role. You can check that it worked in the **Statistics** view: `Label` shows **Negative = BENIGN** and **Positive = DDoS**.
 
-### Task 5 – Stratified Train/Test Split
+### Task 5 – Train/Test Split
 
-Use **Split Data** to split the cleaned data into:
-
-- 80% training data
-- 20% testing data
-
-Set *sampling type* to **stratified sampling**, so both parts keep the same share of BENIGN and DDoS rows as the full data. Tick **use local random seed** and keep the seed at **1992**.
+Rules:
+- 80% training data, 20% test data.
+- The split must be **stratified**, so both parts keep the same share of BENIGN and DDoS rows as the cleaned data.
+- Use a fixed random seed: tick **use local random seed** and set the seed to **1992**. With the same seed you get the same split, and the same results, every time you run the process.
 
 ### Task 6 – Normalize the Features
 
 Logistic Regression is sensitive to the scale of the features (Week 9). For example, `Flow_Bytes_s` can be in the millions while `Fwd_IAT_Min` is often a small number. Without scaling, the large columns dominate.
 
-1. Add a **Normalize** operator on the **training** output of Split Data, with method **Z-transformation**.
-2. Connect the **pre** (preprocessing model) output of Normalize to an **Apply Model** operator, and use that Apply Model to normalize the **test** data.
+Rules:
+- Use **Z-transformation** (mean 0, standard deviation 1).
+- The mean and standard deviation must be learned from the **training data only**, and then the **same values** must be used to scale the test data. Normalizing all rows before the split, or normalizing the test data on its own, leaks information from the test set (data leakage, Week 9).
 
-This way the mean and standard deviation are learned from the training rows only and then reused on the test rows. Normalizing all rows before the split would leak information from the test set into training (data leakage, Week 9).
-
-Use a **Multiply** operator if you need to send the normalized training data (and test data) to both models.
+**Hint (Normalize wiring):** connect the **training** output of the split to **Normalize**. Normalize has an output called **pre** (preprocessing model), which stores the training mean and standard deviation. Send **pre** and the **test** data into an **Apply Model** operator; its output is your normalized test data. Check the **Statistics** view: in the training data every average is 0; in the test data the averages are close to 0 but not exactly 0. Be ready to explain why.
 
 ### Task 7 – Train Two Machine Learning Models
 
-Train two models on the normalized training data:
+Train two models on the normalized training data, and apply each one to the normalized test data:
 
 - **Logistic Regression** (required)
 - One additional model chosen from:
@@ -210,18 +211,21 @@ Train two models on the normalized training data:
   - Random Forest
   - Naïve Bayes
 
-Both models use all remaining feature columns as inputs and `Label` as the label. Apply each trained model to the normalized test data with **Apply Model**.
+Rules:
+- Both models use all remaining feature columns as inputs and `Label` as the label.
+- Build your process **once** with Logistic Regression, evaluate it (Task 8), and export it as `groupNN_P2_LR.rmp`. Then replace Logistic Regression with your second model (nothing else changes, so both models are trained and tested on exactly the same rows), evaluate it, and export it as `groupNN_P2_model2.rmp`. Tip: right-clicking an operator gives you **Replace Operator**.
 
 ### Task 8 – Model Evaluation
 
-Evaluate both models on the test data using the **Performance (Binominal Classification)** operator. Tick these criteria:
+Evaluate each model on the test data with a performance operator for **binominal** (two-class) classification. Your results must show:
 
 - accuracy
 - precision
 - recall
-- f_measure (F1 score)
+- F1 score (called *f_measure* in Altair)
+- the confusion matrix
 
-Report these four numbers for each model, and include screenshots of the **confusion matrix** for both models. Check that the confusion matrix adds up to the size of your test set (Task 3).
+When you click **precision** in the results, the heading must say **positive class: DDoS**. If it does not, check Task 4. The four numbers in each confusion matrix must add up to the size of your test set (Task 3).
 
 ### Task 9 – Model Comparison and Interpretation
 
@@ -232,6 +236,7 @@ Answer these questions in your report. Use your own numbers in every answer.
 3. Why might one model perform better than the other on this dataset?
 4. **False negatives and false positives.** For each model, how many false negatives and how many false positives did it have on the test set? Explain what each one means for analysts in a Security Operations Centre (SOC). Which one is more harmful in a DDoS situation, and why?
 5. **Choosing a metric.** Imagine your model will run in the SOC of an online store. The store's website must stay online during a holiday sale, and the SOC has only three analysts to check every alert. Which **one** metric (accuracy, precision, recall, or F1 score) would you use to choose between your two models, and why? Which of your two models would you pick based on that metric?
+6. **Is this realistic?** Your models are probably more than 99% accurate. Give two reasons why a model trained on this dataset would likely perform worse on real network traffic in a SOC. (Think about how and where this data was collected.)
 
 ----
 
@@ -240,13 +245,13 @@ Answer these questions in your report. Use your own numbers in every answer.
 Each group submits **two files** on Blackboard (one submission per group), and both members present in Week 12:
 
 1. **Written report (PDF)**
-2. **Your exported Altair AI Studio process (.rmp file).** In Altair AI Studio, use **File → Export Process...** and name it with your group number, for example `group07_P2.rmp`.
+2. **Your two exported Altair AI Studio processes (.rmp files)**, one with Logistic Regression and one with your second model (Task 7). In Altair AI Studio, use **File → Export Process...** and name them with your group number, for example `group07_P2_LR.rmp` and `group07_P2_model2.rmp`.
 
 ### 1. Report Requirements
 
 Your report shows that you built and ran the workflow yourselves. It has a cover page, **9 required screenshots**, the row count table from Task 3, and your answers to the Task 9 questions.
 
-**How to take a screenshot:** in Altair AI Studio, click an operator in your process. Its settings appear in the **Parameters** panel on the right. Take one screenshot that shows both the operator and its Parameters panel. Results screenshots must show the "ExampleSet (... examples ...)" line with the number of rows.
+**How to take a screenshot:** in Altair AI Studio, click an operator in your process. Its settings appear in the **Parameters** panel on the right. Take one screenshot that shows both the operator and its Parameters panel. Results screenshots must show the tab name and the "ExampleSet (... examples ...)" line at the bottom of the Data view.
 
 **Cover page**
 
@@ -262,27 +267,27 @@ Under each screenshot, write 2–3 sentences in your own words explaining what t
 |---|---|---|
 | 1 | Complete workflow | Your whole process, with every operator visible |
 | 2 | Loaded data | The results view after loading: your file name, the number of rows, and `Flow_Bytes_s` and `Flow_Packets_s` as polynominal |
-| 3 | Fixing the number columns | Parse Numbers and Replace Infinite Values, with their settings |
-| 4 | "Greater than 0" filter settings | The Filter Examples operator with the six conditions |
+| 3 | Fixing the number columns | The operator(s) you used with their settings, and the Statistics view showing `Flow_Bytes_s` and `Flow_Packets_s` as numeric with their missing values |
+| 4 | "Greater than 0" filter settings | The operator you used, with the six conditions visible |
 | 5 | **Rows after the filter** | The results view after the "greater than 0" filter, showing the number of rows. This number is different for every group's file. |
-| 6 | Positive class and label | Remap Binominals (DDoS = positive) and Set Role (`Label` = label) |
-| 7 | Split Data | 80/20, stratified sampling, use local random seed = 1992 |
-| 8 | Normalize | Z-transformation, and the **pre** output connected to the Apply Model for the test data |
+| 6 | Positive class and label | The operators you used with their settings, plus the **Statistics** view where `Label` is the label and shows Negative = BENIGN and Positive = DDoS |
+| 7 | Train/test split | 80/20, stratified, use local random seed = 1992 |
+| 8 | Normalize | Z-transformation, and how the training mean and standard deviation are applied to the test data |
 | 9 | Results for both models | For each model: accuracy, precision, recall, F1 score, and the confusion matrix |
 
 Also include a screenshot of each model's operator with its parameter settings (Logistic Regression and your second model), with 2–3 sentences on how each model works.
 
 **Row count table:** include your completed table from Task 3. The numbers must match your screenshots 2 and 5, and the four numbers in each confusion matrix must add up to your test set size.
 
-**Task 9 answers:** answer all five questions using your own numbers.
+**Task 9 answers:** answer all six questions using your own numbers.
 
 ### 2. Project Presentation and Questions (Week 12)
 
-Each group meets the instructor in person during **Week 12**. Bring a laptop with Altair AI Studio, your .rmp file, and your group's dataset file.
+Each group meets the instructor in person during **Week 12**. Bring a laptop with Altair AI Studio, your two .rmp files, and your group's dataset file.
 
 **Live demo.** You will:
 
-1. Open your .rmp file and run it on your group's dataset file. The row count after the "greater than 0" filter and the model results must match your report.
+1. Open one of your .rmp files (the instructor chooses which) and run it on your group's dataset file. The row count after the "greater than 0" filter and the model results must match your report.
 2. Make one small change that the instructor asks for on the spot (for example, change the split to 70/30, or remove the Normalize operator), run it again, and explain what changed in the results and why.
 
 **Individual questions.** Each student is asked **three questions** and receives their **own mark** for this part. Questions are about your own workflow and your own numbers, for example:
@@ -300,9 +305,9 @@ If a student cannot explain a part of the report, marks for that part of the rep
 | Component | What is marked | Marks |
 |----------|-------------|------|
 | **Report: screenshots and numbers** | All 9 required screenshots are included, and the numbers (row counts, confusion matrices) match your group's dataset file and each other | 3 |
-| **Report: Task 9 answers** | Clear answers to the five Task 9 questions, using your own numbers (including the false negative / false positive discussion and the metric choice) | 2 |
-| **Live demo** | The group runs its own .rmp on its own file with matching results (2), and makes the requested change and explains its effect (2) | 4 |
+| **Report: Task 9 answers** | Clear answers to the six Task 9 questions, using your own numbers (including the false negative / false positive discussion and the metric choice) | 2 |
+| **Live demo** | The group runs its own .rmp files on its own file with matching results (2), and makes the requested change and explains its effect (2) | 4 |
 | **Individual questions** | Each student answers three questions about their own workflow and results (2 marks per question, marked for each student separately) | 6 |
 | **Total** |  | **15 Marks** |
 
-A submission without the .rmp file loses 2 marks from the report. Results that match another group's dataset file, instead of your own, receive 0 for the project.
+A submission without the .rmp files loses 2 marks from the report. Results that match another group's dataset file, instead of your own, receive 0 for the project.
