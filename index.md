@@ -1,10 +1,10 @@
 <h1 align="center" style="text-align:center;">CYT180 — Project 2 — Fall2026</h1>
 <h2 align="center" style="text-align:center;">Network Traffic Classification Using Machine Learning Algorithms (15%)</h2>
 
-**Work type:** Group project (2 students, or solo) <br>
+**Work type:** Group project (2 students) <br>
 **Group registration:** Blackboard discussion post, before the end of Week 10 <br>
 **Report due:** Dec 1 @ 11:59 PM, on Blackboard<br>
-**Presentations:** Week 12, in person, to the instructor<br>
+**Presentations:** Week 12 during in person class<br>
 
 In this project, you will build a machine learning pipeline to detect malicious network traffic using data from a real cybersecurity dataset. The objective is to apply machine learning classification techniques to tell the difference between benign (normal) network traffic and Distributed Denial of Service (DDoS) attacks.
 
@@ -54,8 +54,8 @@ You can access **Altair AI Studio through Seneca MyApps**. Log in to your Seneca
 
 This is a **group project**.
 
-- Each group should have 2 students. Solo submissions are allowed, but groups may not have more than 2 students.
-- Both students must take part in building the workflow, writing the report, and presenting the project.
+- Each group should have 2 students. 
+- Both students must take part in building the workflow, writing the report, and presenting the project. This project is not the kind of work that can be split, so both partners whould have 100% understanding of the workflow.
 - During the presentation, both group members must be able to explain the project and answer questions.
 - The presentation is **not a formal class presentation**. Each group demonstrates and explains their project directly to the instructor.
 
