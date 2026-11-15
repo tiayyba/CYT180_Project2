@@ -115,7 +115,7 @@ The `Label` column says whether each flow is:
 - **BENIGN**: normal network activity
 - **DDoS**: malicious traffic from a Distributed Denial of Service attack
 
-In this project **DDoS is the positive class**. This means that precision, recall, and F1 score are always calculated for the DDoS class: recall is "what share of the real attacks did the model catch", and precision is "when the model raised a DDoS alert, how often was it right". Task 4 shows how to set this in Altair AI Studio.
+In this project **DDoS is the positive class**. This means that precision, recall, and F1 score are always calculated for the DDoS class: recall is "what share of the real attacks did the model catch", and precision is "when the model raised a DDoS alert, how often was it right". Task 4 explains how to set this in Altair AI Studio.
 
 ----
 
@@ -133,7 +133,7 @@ Each task tells you **what** your workflow must do and the **rules** it must fol
 
 Follow the rules exactly. Every group's dataset file is different, and your row counts are checked against your own file.
 
-**Seeing your results:** to see the data after any step, connect that operator's output to a **res** port (the small half-circles on the right edge of the process canvas) and click **Run**. The number of rows is shown at the bottom of the **Data** view, for example "ExampleSet (79,010 examples, 0 special attributes, 77 regular attributes)". The **Statistics** view shows each attribute's type, missing values, and the BENIGN/DDoS counts for `Label`. Keep a record of the number of rows after each task; you need them for Task 3.
+**Seeing your results:** to see the data after any step, connect that operator's output to a **res** port (the small half-circles on the right edge of the process canvas) and click **Run**. The number of rows is shown at the bottom of the **Data** view, for example "ExampleSet (79,010 examples, 0 special attributes, 78 regular attributes)". The **Statistics** view shows each attribute's type, missing values, and the BENIGN/DDoS counts for `Label`. Keep a record of the number of rows after each task; you need them for Task 3.
 
 ### Task 1 – Load the Dataset
 
@@ -288,9 +288,9 @@ Each group meets the instructor in person during **Week 12**. Bring a laptop wit
 **Live demo.** You will:
 
 1. Open one of your .rmp files (the instructor chooses which) and run it on your group's dataset file. The row count after the "greater than 0" filter and the model results must match your report.
-2. You may be asked to make a small change to the model and run it again, and explain what changed in the results and why.
+2. You will be asked to make a small change to the model and run it again, and explain what changed in the results and why.
 
-**Individual questions.** Each student is asked **3-4 questions** and receives their **own mark** for this part. Questions are about your own workflow and your own numbers in the report.If a student cannot explain a part of the report, marks for that part of the report may be reduced for that student.
+**Individual questions.** Each student is asked **3-4 questions** and receives their **own mark** for this part. Questions are about your own workflow and your own numbers in the report. If a student cannot explain a part of the report, marks for that part of the report may be reduced for that student.
 
 ----
 
@@ -300,8 +300,8 @@ Each group meets the instructor in person during **Week 12**. Bring a laptop wit
 |----------|-------------|------|
 | **Report: screenshots and numbers** | All 9 required screenshots are included, and the numbers (row counts, confusion matrices) match your group's dataset file and each other | 3 |
 | **Report: Task 9 answers** | Clear answers to the six Task 9 questions, using your own numbers (including the false negative / false positive discussion and the metric choice) | 2 |
-| **Live demo** | The group runs its own .rmp files on its own file with matching results, and makes the requested change and explains its effect| 4 |
-| **Individual questions** | Each student answers 3-4 questions about their own workflow and results ( marked for each student separately) | 6 |
+| **Live demo** | The group runs its own .rmp files on its own file with matching results, and makes the requested change and explains its effect | 4 |
+| **Individual questions** | Each student answers 3-4 questions about their own workflow and results (marked for each student separately) | 6 |
 | **Total** |  | **15 Marks** |
 
 A submission without the .rmp files loses 2 marks from the report. Results that match another group's dataset file, instead of your own, receive 0 for the project.
