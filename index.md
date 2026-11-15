@@ -89,7 +89,6 @@ Each row is one **network flow** (one conversation between two computers) and ha
 You do **not** work with the full file. Each group gets a random sample of it (about 79,000 of the 225,745 rows, roughly 35%), so the file is small enough for Altair AI Studio on any computer.
 
 - Download the file for **your group number** from Blackboard. For example, group 07 uses `CYT180_P2_group07.zip`, which contains `CYT180_P2_group07.csv`. Every group has a different file.
-- The sample still has all the problems of the original file (text values such as `NaN` and `Infinity`, zero and negative values), so all the cleaning steps below still apply.
 - Groups that used a different file than their own group's file, or whose numbers match another group's numbers, receive 0 for the project.
 
 ### Column names
