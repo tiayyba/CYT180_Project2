@@ -1,4 +1,5 @@
-# CYT180 — Project 2: Network Traffic Classification Using Machine Learning Algorithms (15%)
+<h1 align="center" style="text-align:center;">CYT180 — Project 2 — Fall2026</h1>
+<h2 align="center" style="text-align:center;">Network Traffic Classification Using Machine Learning Algorithms (15%)</h2>
 
 **Work type:** Group project (2 students, or solo) <br>
 **Group registration:** Blackboard discussion post, before the end of Week 10 <br>
@@ -69,7 +70,7 @@ There are 19 group numbers, from **01** to **19**. Each group chooses one free g
 
 Before you post, read the earlier replies and pick a number that no other group has taken. If two groups post the same number, the group that posted first keeps it, and the other group must pick a new free number. Your group number decides your dataset file, so you can download it as soon as you have posted.
 
-The post must be submitted **before the end of Week 11**. All presentations take place in **Week 12**. Week 14 is a backup week, used only if a group cannot present in Week 12 for an approved reason. The instructor will post the presentation schedule after registration closes.
+The post must be submitted **before the end of Week 10**. All presentations take place in **Week 12**. Week 14 is a backup week, used only if a group cannot present in Week 12 for an approved reason. The instructor will post the presentation schedule after registration closes.
 
 ----
 
