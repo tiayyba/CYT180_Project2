@@ -55,7 +55,7 @@ You can access **Altair AI Studio through Seneca MyApps**. Log in to your Seneca
 This is a **group project**.
 
 - Each group should have 2 students. 
-- Both students must take part in building the workflow, writing the report, and presenting the project. This project is not the kind of work that can be split, so both partners whould have 100% understanding of the workflow.
+- Both students must take part in building the workflow, writing the report, and presenting the project. This project is not the kind of work that can be split, so both partners should have 100% understanding of the workflow.
 - During the presentation, both group members must be able to explain the project and answer questions.
 - The presentation is **not a formal class presentation**. Each group demonstrates and explains their project directly to the instructor.
 
